@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import('./style.css');
-const { FontLoader, OrbitControls, TextGeometry } = import('three/examples/jsm/Addons.js');
+import './style.css';
+import { FontLoader, OrbitControls, TextGeometry } from 'three/examples/jsm/libs/your-library.js';
 import GUI from "lil-gui";
 
 /**
