@@ -1,11 +1,6 @@
-import * as THREE from "three";
-import {
-  FontLoader,
-  OrbitControls,
-  TextGeometry,
-} from "three/examples/jsm/Addons.js";
-import "./style.css";
-// import gsap from "gsap";
+import * as THREE from 'three';
+import('./style.css');
+const { FontLoader, OrbitControls, TextGeometry } = await import('three/examples/jsm/Addons.js');
 import GUI from "lil-gui";
 
 /**
@@ -24,15 +19,15 @@ const scene = new THREE.Scene();
  * Textures
  */
 const textureLoader = new THREE.TextureLoader();
-const matcapTexture = textureLoader.load("/textures/matcaps/3.png");
+const matcapTexture = textureLoader.load("./static/textures/matcaps/3.png");
 
 
 /**
  * Fonts Loader
  */
 const fontLoader = new FontLoader();
-fontLoader.load("/fonts/gentilis_regular.typeface.json", (font) => {
-  const textGeometry = new TextGeometry("Rajeev's World", {
+fontLoader.load("./static/fonts/gentilis_regular.typeface.json", (font) => {
+  const textGeometry = new TextGeometry("Hello World", {
     font: font,
     size: 0.5,
     depth: 0.2,
